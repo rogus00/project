@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="file:/C:/Users/Admin/Desktop/STUDIA/SEMESTR%20V/METODY%20NUMERYCZNE/TVDemo/src/main/java/edu/ib/style1.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ib.TVDemoController">
+   <left>
+      <LineChart fx:id="chart" prefHeight="508.0" prefWidth="617.0" BorderPane.alignment="CENTER">
+         <xAxis>
+            <NumberAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </LineChart>
+   </left>
+   <right>
+      <TableView fx:id="table" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="t" prefWidth="97.0" text="t" />
+            <TableColumn prefWidth="84.0" text="x" fx:id="x" />
+         </columns>
+      </TableView>
+   </right>
+   <bottom>
+      <VBox prefHeight="92.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="equation" promptText="equation" />
+                  <TextField fx:id="min" promptText="a" />
+                  <TextField fx:id="max" promptText="b" />
+                  <TextField promptText="x0" fx:id="x0" />
+                  <TextField fx:id="h" promptText="h" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnEuler" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#btnEulerClicked" prefHeight="25.0" prefWidth="164.0" text="Euler" />
+                  <Button id="style" fx:id="btnModifiedEuler" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnModifiedEulerClicked" prefHeight="25.0" prefWidth="164.0" stylesheets="@../../java/edu/ib/style1.css" text="Modified Euler" textAlignment="CENTER" />
+                  <Button fx:id="reset" mnemonicParsing="false" onAction="#btnResetClicked" prefHeight="27.0" prefWidth="154.0" text="Reset" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

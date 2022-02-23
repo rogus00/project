@@ -1,0 +1,41 @@
+.root {
+    -fx-background-color: #dbe5f0;
+}
+
+.button {
+    -fx-background-color: linear-gradient(#a3a3a3, #b5b5b5);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-border-color: #edf0fd;
+    -fx-text-fill: black;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+
+}
+.chart {
+    -fx-padding: 10px;
+}
+.chart-content {
+    -fx-padding: 30px;
+}
+.chart-legend {
+    -fx-background-color:  transparent;
+    -fx-padding: 20px;
+}
+
+.chart-plot-background {
+    -fx-background-color: #edf0fd;
+}
+
+.text-field {
+    -fx-background-color: #f5c6e3;
+    -fx-border-color: #dbe5f0;
+    -fx-padding: 8;
+    -fx-prompt-text-fill: #666666;
+}
